@@ -2,42 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ＶＡＰＯＲＷＡＶＥ　ＰＯＲＴＦＯＬＩＯ　１９９７</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ＶＡＰＯＲＷＡＶＥ　ＺＯＮＥ</title>
     <style>
         body {
             background: #000;
             color: #0ff;
             font-family: 'Courier New', monospace;
             margin: 2rem;
-            background-image: 
-                linear-gradient(45deg, #ff00ff22 25%, transparent 25%),
-                linear-gradient(-45deg, #00ffff22 25%, transparent 25%);
-            background-size: 20px 20px;
-        }
-        
-        /* CRT screen effect */
-        .crt::after {
-            content: " ";
-            display: block;
-            position: fixed;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            background: rgba(0, 255, 255, 0.03);
-            pointer-events: none;
-            z-index: 999;
-            animation: crt 0.3s infinite;
+            line-height: 1.6;
         }
 
-        @keyframes crt {
-            0% { background: rgba(0, 0, 0, 0.1); }
-            50% { background: rgba(255, 255, 255, 0.04); }
-        }
-
+        /* Glitch effect */
         .glitch {
+            position: relative;
             animation: glitch 2s infinite;
-            text-shadow: 2px 2px #ff00ff;
         }
 
         @keyframes glitch {
@@ -49,77 +28,99 @@
             100% { transform: translate(0); }
         }
 
-        a {
+        /* Neon text effect */
+        h1, h2, h3 {
             color: #0ff;
+            text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #ff00ff;
+        }
+
+        a {
+            color: #ff00ff;
             text-decoration: none;
         }
 
         a:hover {
-            color: #ff00ff;
+            color: #0ff;
             text-decoration: underline;
         }
 
-        marquee {
-            color: #ff00ff;
-            font-size: 1.2em;
-            margin: 2rem 0;
+        /* Retro box styling */
+        .box {
+            border: 2px solid #0ff;
+            padding: 1rem;
+            margin: 1rem 0;
+            background: rgba(0, 255, 255, 0.05);
+            box-shadow: 0 0 10px #0ff, 0 0 20px #ff00ff;
         }
 
-        .scanline {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                to bottom,
-                rgba(255, 255, 255, 0) 0%,
-                rgba(255, 255, 255, 0.1) 10%,
-                rgba(255, 255, 255, 0) 100%
-            );
-            animation: scanline 6s linear infinite;
-            pointer-events: none;
+        /* Blinking cursor effect */
+        .blink {
+            animation: blink 1s infinite;
         }
 
-        @keyframes scanline {
-            0% { transform: translateY(-100%); }
-            100% { transform: translateY(100%); }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        /* Retro scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #000;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #0ff;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ff00ff;
         }
     </style>
 </head>
 <body>
-    <div class="crt">
-        <div class="scanline"></div>
-        
-        <center>
-            <h1 class="glitch">ＷＥＬＣＯＭＥ　ＴＯ　ＭＹ　ＺＯＮＥ</h1>
-            <marquee>/// UNDER CONSTRUCTION /// ＡＥＳＴＨＥＴＩＣＳ /// ＣＹＢＥＲＰＵＮＫ /// ＤＲＥＡＭＣＡＳＴ ///</marquee>
-            
-            <pre style="color:#ff00ff">
-╦ ╦┌─┐┬  ┌─┐┌─┐┬─┐┌┬┐
-║║║├┤ │  │  │ │├┬┘ │ 
-╚╩╝└─┘┴─┘└─┘└─┘┴└─ ┴ 
-            </pre>
+    <div class="box">
+        <h1 class="glitch">ＷＥＬＣＯＭＥ　ＴＯ　ＭＹ　ＶＡＰＯＲＷＡＶＥ　ＺＯＮＥ</h1>
+        <p>ＴＨＩＳ　ＩＳ　ＭＹ　ＰＥＲＳＯＮＡＬ　ＷＥＢＳＩＴＥ　ＦＯＲ　ＶＡＰＯＲＷＡＶＥ　ＡＥＳＴＨＥＴＩＣＳ．</p>
+    </div>
 
-            <h2>/// ＡＢＯＵＴ ＭＥ ///</h2>
-            <p>ＣＹＢＥＲ　ＤＩＧＩＴＡＬ　ＣＲＥＡＴＯＲ<br>
-            ＳＰＥＣＩＡＬＩＺＩＮＧ　ＩＮ：<br>
-            ＶＡＰＯＲＷＡＶＥ　ＡＥＳＴＨＥＴＩＣＳ<br>
-            ０ＤＡＹ　ＨＡＣＫＳ<br>
-            ＰＨＩＬＩＰ　Ｋ．ＤＩＣＫ　ＡＮＡＬＹＳＩＳ</p>
+    <div class="box">
+        <h2>ＡＢＯＵＴ　ＭＥ</h2>
+        <p>Ｉ’Ｍ　Ａ　ＤＩＧＩＴＡＬ　ＣＲＥＡＴＯＲ　ＷＩＴＨ　Ａ　ＬＯＶＥ　ＦＯＲ　ＶＡＰＯＲＷＡＶＥ，　ＧＬＩＴＣＨ　ＡＲＴ，　ＡＮＤ　ＲＥＴＲＯ　ＴＥＣＨＮＯＬＯＧＹ．</p>
+        <p>ＦＥＥＬ　ＦＲＥＥ　ＴＯ　ＥＸＰＬＯＲＥ　ＭＹ　ＷＯＲＬＤ！</p>
+    </div>
 
-            <h2>/// ＰＲＯＪＥＣＴＳ ///</h2>
-            <p>↳ <a href="#">ＴＨＥ　ＭＡＴＲＩＸ　ＬＯＡＤＥＲ．ＥＸＥ</a><br>
-            ↳ <a href="#">ＤＥＳＥＲＴ　ＢＵＳＩＮＥＳＳ　ＳＩＭＵＬＡＴＯＲ　１９９７</a><br>
-            ↳ <a href="#">ＷＩＮＤＯＷＳ　９５　ＴＨＥＭＥ　ＰＡＣＫ</a></p>
+    <div class="box">
+        <h2>ＰＲＯＪＥＣＴＳ</h2>
+        <ul>
+            <li><a href="#">ＶＡＰＯＲＷＡＶＥ　ＭＩＸＴＡＰＥ　ＶＯＬ．１</a></li>
+            <li><a href="#">ＧＬＩＴＣＨ　ＡＲＴ　ＧＡＬＬＥＲＹ</a></li>
+            <li><a href="#">ＲＥＴＲＯ　ＧＡＭＥ　ＥＭＵＬＡＴＯＲ</a></li>
+        </ul>
+    </div>
 
-            <h2>/// ＣＯＮＴＡＣＴ ///</h2>
-            <p>ＡＯＬ: <a href="#">DIGITAL_ANGEL@AOL.COM</a><br>
-            ＩＲＣ: #vaporwave@undernet<br>
-            ＧＩＴＨＵＢ: <a href="#">ＧＩＴＨＵＢ．ＣＯＭ／ＶＡＰＯＲＷＡＶＥ＿ＬＯＲＤ</a></p>
+    <div class="box">
+        <h2>ＣＯＮＴＡＣＴ</h2>
+        <p>ＥＭＡＩＬ: <a href="mailto:digital_angel@example.com">ＤＩＧＩＴＡＬ_ＡＮＧＥＬ@ＥＸＡＭＰＬＥ．ＣＯＭ</a></p>
+        <p>ＤＩＳＣＯＲＤ: ＶＡＰＯＲＬＯＲＤ#1234</p>
+        <p>ＮＥＯＣＩＴＩＥＳ: <a href="https://neocities.org">ＭＹ　ＮＥＯＣＩＴＹ</a></p>
+    </div>
 
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAMUlEQVR42mNkQAKrVq36zwjjgzhhYWGMYAEYB8RmROaABf///2fEsuC4AY4Exz1wJgEAKTwM9w8KrzAAAAAASUVORK5CYII=" alt="under construction gif">
-        </center>
+    <div class="box">
+        <h2>ＦＡＶＯＲＩＴＥ　ＬＩＮＫＳ</h2>
+        <ul>
+            <li><a href="https://neocities.org">ＮＥＯＣＩＴＩＥＳ</a></li>
+            <li><a href="https://windows93.net">ＷＩＮＤＯＷＳ９３</a></li>
+            <li><a href="https://poolside.fm">ＰＯＯＬＳＩＤＥ．ＦＭ</a></li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h2>ＬＩＶＥ　ＳＴＡＴＵＳ</h2>
+        <p>ＣＵＲＲＥＮＴＬＹ: ＯＮＬＩＮＥ <span class="blink">_</span></p>
     </div>
 
     <script>
