@@ -1,0 +1,43 @@
+body {
+    background-color: #000;
+    color: #0f0;
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1.5;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  nav a {
+    color: #0f0;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  section {
+    padding: 20px;
+  }
+  
+  h1, h2 {
+    color: #f00;
+  }
+  
+  .gallery img {
+    width: 100px;
+    height: 100px;
+    image-rendering: pixelated;
+  }
+  
+  button {
+    background-color: #00f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #f00;
+  }
