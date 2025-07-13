@@ -5,39 +5,31 @@
     z-index: 1000;
 }
 
-.menu-icon {
+.menu-icon.star-icon {
     display: flex;
-    flex-direction: column;
-    width: 32px;
-    height: 32px;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
-}
-
-.menu-icon span {
-    display: block;
-    height: 4px;
-    width: 100%;
-    background: #333;
-    border-radius: 2px;
-    transition: 0.3s;
-}
-
-#menu-toggle {
-    display: none;
+    background: none;
+    border: none;
+    padding: 0;
 }
 
 .menu {
     display: none;
     position: absolute;
-    top: 40px;
-    right: 0;
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    border-radius: 8px;
+    top: 30px; /* Move menu higher */
+    right: 0; /* Align menu flush to the right edge */
+    background: rgba(255,255,255,0.0); /* fully transparent */
+    box-shadow: none;
+    border-radius: 12px;
     list-style: none;
-    padding: 10px 0;
-    min-width: 150px;
+    padding: 8px 0; /* Reduce vertical padding */
+    min-width: 140px; /* Optional: make menu a bit narrower */
+    text-align: right;
+    padding-right: 10px; /* Add a little padding from the edge */
 }
 
 .menu li {
@@ -46,16 +38,73 @@
 
 .menu li a {
     display: block;
-    padding: 10px 20px;
-    color: #333;
+    padding: 8px 0;
+    color: #fff;
     text-decoration: none;
-    transition: background 0.2s;
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: none;
+    transition: color 0.2s, text-shadow 0.5s;
+    animation: none; /* Remove twinkle animation */
 }
 
 .menu li a:hover {
-    background: #f0f0f0;
+    color: #ffd700;
+    text-shadow:
+        0 0 12px #ffd700,
+        0 0 24px #fff;
 }
 
-#menu-toggle:checked ~ .menu {
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked ~ .menu-icon.star-icon + .menu {
     display: block;
+}
+
+.star-svg {
+    transition: transform 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+    transform-origin: 50% 50%;
+}
+
+.star-svg.spin-once {
+    animation: spinstar 0.6s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+@keyframes spinstar {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(90deg);}
+}
+
+/* Additional styles for menu link glow effect */
+.glow-letter {
+    display: inline-block;
+    position: relative;
+    transition: text-shadow 0.4s;
+    text-shadow: none;
+}
+
+.glow-letter:before {
+    content: attr(data-letter);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #ffd700;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.menu-link:hover .glow-letter {
+    text-shadow:
+        0 0 8px #fff,
+        0 0 16px #fff,
+        0 0 24px #fff;
+}
+
+.glow-letter.glowing {
+    text-shadow: none; /* Remove JS glow effect */
 }

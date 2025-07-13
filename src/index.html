@@ -12,18 +12,29 @@
     <!-- Hamburger Menu -->
     <nav class="hamburger-nav">
         <input type="checkbox" id="menu-toggle" />
-        <ul class="menu">
-            <li><a href="#section-title" class="menu-link">Home</a></li>
-            <li><a href="#section-about" class="menu-link">About</a></li>
-            <li><a href="#section-projects" class="menu-link">Projects</a></li>
-            <li><a href="#section-experience" class="menu-link">Experience</a></li>
-            <li><a href="#section-contacts" class="menu-link">Contacts</a></li>
-        </ul>
-        <label for="menu-toggle" class="menu-icon">
-            <span></span>
-            <span></span>
-            <span></span>
+        <label for="menu-toggle" class="menu-icon star-icon" id="star-menu-icon">
+            <!-- Symmetrical 4-sided Star SVG icon without glow -->
+            <svg class="star-svg" width="40" height="40" viewBox="0 0 40 40" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="20,2 26,14 38,20 26,26 20,38 14,26 2,20 14,14" />
+            </svg>
         </label>
+        <ul class="menu">
+            <li>
+                <a href="#section-title" class="menu-link glow-letter">Home</a>
+            </li>
+            <li>
+                <a href="#section-about" class="menu-link glow-letter">About</a>
+            </li>
+            <li>
+                <a href="#section-projects" class="menu-link glow-letter">Projects</a>
+            </li>
+            <li>
+                <a href="#section-experience" class="menu-link glow-letter">Experience</a>
+            </li>
+            <li>
+                <a href="#section-contacts" class="menu-link glow-letter">Contacts</a>
+            </li>
+        </ul>
     </nav>
     <canvas id="stars-canvas"></canvas>
     <canvas id="leaves-canvas"></canvas>
@@ -63,6 +74,7 @@
     </div>
     <script src="scripts/stars.js"></script>
     <script src="scripts/leaves.js"></script>
-    <script src="scripts/smoothScroll.js"></script>
+    <script src="scripts/hamburgerMenu.js"></script>
+    <script src="scripts/scrollMovement.js"></script>
 </body>
 </html>
