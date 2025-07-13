@@ -6,11 +6,28 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/title.css">
+    <link rel="stylesheet" href="styles/hamburgerMenu.css"> <!-- Add this for menu styling -->
 </head>
 <body>
+    <!-- Hamburger Menu -->
+    <nav class="hamburger-nav">
+        <input type="checkbox" id="menu-toggle" />
+        <ul class="menu">
+            <li><a href="#section-title" class="menu-link">Home</a></li>
+            <li><a href="#section-about" class="menu-link">About</a></li>
+            <li><a href="#section-projects" class="menu-link">Projects</a></li>
+            <li><a href="#section-experience" class="menu-link">Experience</a></li>
+            <li><a href="#section-contacts" class="menu-link">Contacts</a></li>
+        </ul>
+        <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </nav>
     <canvas id="stars-canvas"></canvas>
     <canvas id="leaves-canvas"></canvas>
-    <div class="section section-title">
+    <div class="section section-title" id="section-title">
         <div class="container">
             <div class="title-text">
                 <span>m</span><span>i</span><span>l</span><span>3</span><span>r</span><span>i</span>
@@ -20,25 +37,25 @@
             </div>
         </div>
     </div>
-    <div class="section section-about">
+    <div class="section section-about" id="section-about">
         <div class="container">
             <h2>About Me</h2>
             <div class="description-text">placeholder for about me</div>
         </div>
     </div>
-    <div class="section section-projects">
+    <div class="section section-projects" id="section-projects">
         <div class="container">
             <h2>Projects</h2>
             <div class="description-text">placeholder for projects</div>
         </div>
     </div>
-    <div class="section section-experience">
+    <div class="section section-experience" id="section-experience">
         <div class="container">
             <h2>Experience</h2>
             <div class="description-text">placeholder for experience</div>
         </div>
     </div>
-    <div class="section section-contacts">
+    <div class="section section-contacts" id="section-contacts">
         <div class="container">
             <h2>Contacts</h2>
             <div class="description-text">placeholder for contacts</div>
@@ -46,5 +63,6 @@
     </div>
     <script src="scripts/stars.js"></script>
     <script src="scripts/leaves.js"></script>
+    <script src="scripts/smoothScroll.js"></script>
 </body>
 </html>
