@@ -21,41 +21,20 @@ body, html {
 
 /* Each section gets its own sunset color or gradient */
 .section-title {
-    background: rgba(24, 24, 24, 0);
+    background: transparent;
 }
 
 .section-about {
-    /* Transparent at top, opaque at bottom */
-    background: linear-gradient(
-        to bottom,
-        rgba(24, 24, 24, 0) 0%,      /* Fully transparent */
-        rgba(35, 35, 91, 0.7) 40%,   /* Semi-transparent deep blue */
-        rgba(58, 58, 124, 1) 100%    /* Fully opaque faint purple */
-    );
+    background: transparent;
 }
 .section-projects {
-    background: linear-gradient(
-        to bottom,
-        #3a3a7c 0%,      /* Faint purple */
-        #355ca3 40%,     /* Blue */
-        #6a5ca3 100%     /* Blue-purple */
-    );
+    background: transparent;
 }
 .section-experience {
-    background: linear-gradient(
-        to bottom,
-        #6a5ca3 0%,      /* Blue-purple */
-        #f7b733 60%,     /* Gold */
-        #ff9800 100%     /* Orange */
-    );
+    background: transparent;
 }
 .section-contacts {
-    background: linear-gradient(
-        to bottom,
-        #ff9800 0%,      /* Orange */
-        #ff7c7c 60%,     /* Pink */
-        #ff3c3c 100%     /* Red */
-    );
+    background: transparent;
 }
 
 body {
