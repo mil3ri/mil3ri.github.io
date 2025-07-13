@@ -1,0 +1,12 @@
+{
+    "Boun Course Planner": {
+        "path": "/assets/boun-course-planner.png",
+        "url": "https://mil3ri.github.io/boun-course-planner/",
+        "repository": "https://github.com/mil3ri/boun-course-planner",
+        "description": "A web application for planning Bogazici University courses"
+    },
+    "Boun Course Scraper": {
+        "repository": "https://github.com/mil3ri/boun-scraper",
+        "description": "A Python script to scrape course data from Bogazici University's website"
+    }
+}
