@@ -1,0 +1,37 @@
+.title-text {
+    color: #fff;
+    font-size: 5rem;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    user-select: none;
+}
+
+.title-text span {
+    display: inline-block;
+    color: #fff;
+    font-size: 5rem;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    user-select: none;
+    opacity: 0.7;
+    text-shadow: 0 0 8px #fff4;
+    animation: glow 12s linear infinite;
+}
+
+@keyframes glow {
+    0%   { opacity: 0.7; text-shadow: 0 0 8px #fff4; }
+    15%  { opacity: 1;   text-shadow: 0 0 32px #fff8, 0 0 8px #fff4; }
+    45%  { opacity: 1;   text-shadow: 0 0 32px #fff8, 0 0 8px #fff4; }
+    60%  { opacity: 0.7; text-shadow: 0 0 8px #fff4; }
+    100% { opacity: 0.7; text-shadow: 0 0 8px #fff4; }
+}
+
+/* Each letter glows in a bigger wave */
+.title-text span:nth-child(1) { animation-delay: 0s; }
+.title-text span:nth-child(2) { animation-delay: 0.4s; }
+.title-text span:nth-child(3) { animation-delay: 0.8s; }
+.title-text span:nth-child(4) { animation-delay: 1.2s; }
+.title-text span:nth-child(5) { animation-delay: 1.6s; }
+.title-text span:nth-child(6) { animation-delay: 2.0s; }

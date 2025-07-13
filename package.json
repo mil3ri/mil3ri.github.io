@@ -1,0 +1,16 @@
+{
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "description": "A personal portfolio site with a dark glossy background and animated effects.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src"
+  },
+  "keywords": [
+    "portfolio",
+    "website",
+    "github-pages"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
