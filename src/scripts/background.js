@@ -52,5 +52,15 @@ window.addEventListener('resize', () => {
     canvas.height = window.innerHeight;
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    for (let i = 0; i < 8; i++) {
+        const leaf = document.createElement('div');
+        leaf.className = 'leaf';
+        leaf.style.setProperty('--delay', `${Math.random() * 12}s`);
+        leaf.style.setProperty('--rotate', `${Math.random() * 60 - 30}deg`);
+        document.body.appendChild(leaf);
+    }
+});
+
 init();
 animate();
