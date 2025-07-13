@@ -2,7 +2,7 @@
   "name": "my-portfolio",
   "version": "1.0.0",
   "description": "A personal portfolio site with a dark glossy background and animated effects.",
-  "main": "/src/index.html",
+  "main": "/index.html",
   "scripts": {
     "start": "live-server src"
   },
