@@ -1,0 +1,16 @@
+{
+    "35Dijital": {
+        "Website": "https://35dijital.com",
+        "Position": "Software Engineer",
+        "StartDate": "2023-10-01",
+        "EndDate": "Present",
+        "Description": "Developing and maintaining web applications using modern technologies."
+    },
+    "Genarion": {
+        "Website": "https://genarion.com",
+        "Position": "Software Engineer",
+        "StartDate": "2022-01-01",
+        "EndDate": "2023-09-30",
+        "Description": "Worked on various projects involving web development and software solutions."
+    }
+}
