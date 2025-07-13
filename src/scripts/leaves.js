@@ -1,7 +1,12 @@
-const canvas = document.getElementById('leaves-canvas');
-const ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+const leavesCanvas = document.getElementById('leaves-canvas');
+const leavesCtx = leavesCanvas.getContext('2d');
+
+function resizeLeavesCanvas() {
+    leavesCanvas.width = window.innerWidth;
+    leavesCanvas.height = window.innerHeight;
+}
+window.addEventListener('resize', resizeLeavesCanvas);
+resizeLeavesCanvas();
 
 const LEAF_COUNT = 4;
 const leaves = [];
@@ -31,8 +36,8 @@ function createLeaf() {
     const width = (15 + Math.random() * 35) / 4;
     const height = (20 + Math.random() * 40) / 4;
     return {
-        x: Math.random() * canvas.width,
-        y: Math.random() * -canvas.height,
+        x: Math.random() * leavesCanvas.width,
+        y: Math.random() * -leavesCanvas.height,
         width,
         height,
         size: Math.max(width, height), // for off-screen check
@@ -48,21 +53,21 @@ function createLeaf() {
 }
 
 function drawLeaf(leaf) {
-    ctx.save();
-    ctx.translate(leaf.x, leaf.y);
-    ctx.rotate(leaf.angle);
-    ctx.beginPath();
+    leavesCtx.save();
+    leavesCtx.translate(leaf.x, leaf.y);
+    leavesCtx.rotate(leaf.angle);
+    leavesCtx.beginPath();
     if (leaf.shapeType === 0) {
         // Classic leaf (bezier)
-        ctx.moveTo(0, 0);
-        ctx.bezierCurveTo(
+        leavesCtx.moveTo(0, 0);
+        leavesCtx.bezierCurveTo(
             -leaf.width / 2, -leaf.height / 2,
             leaf.width / 2, -leaf.height / 2,
             0, leaf.height
         );
     } else if (leaf.shapeType === 1) {
         // Thinner, sharper oval leaf
-        ctx.ellipse(
+        leavesCtx.ellipse(
             0, leaf.height / 2,           // center
             leaf.width / 3, leaf.height / 2, // width much smaller for thinness
             0, 0, Math.PI * 2
@@ -70,7 +75,7 @@ function drawLeaf(leaf) {
     } else {
         // Jagged leaf (more leaf-like, with pointed tip and base)
         const points = 7;
-        ctx.moveTo(0, leaf.height); // base
+        leavesCtx.moveTo(0, leaf.height); // base
         for (let i = 1; i < points; i++) {
             const angle = Math.PI * (i / (points - 1));
             // Make the tip sharper and sides jagged
@@ -79,29 +84,29 @@ function drawLeaf(leaf) {
                 : leaf.width / 2.5;
             const x = Math.cos(angle - Math.PI / 2) * r;
             const y = Math.sin(angle - Math.PI / 2) * leaf.height;
-            ctx.lineTo(x, y);
+            leavesCtx.lineTo(x, y);
         }
-        ctx.lineTo(0, leaf.height); // close at base
+        leavesCtx.lineTo(0, leaf.height); // close at base
     }
-    ctx.closePath();
-    ctx.fillStyle = leaf.color;
-    ctx.globalAlpha = 0.85;
-    ctx.fill();
-    ctx.restore();
+    leavesCtx.closePath();
+    leavesCtx.fillStyle = leaf.color;
+    leavesCtx.globalAlpha = 0.85;
+    leavesCtx.fill();
+    leavesCtx.restore();
 }
 
 function updateLeaf(leaf) {
     leaf.y += leaf.speedY;
     leaf.x += leaf.speedX + Math.sin(leaf.swayPhase + leaf.y / 50) * leaf.sway;
     leaf.angle += leaf.angularSpeed;
-    if (leaf.y > canvas.height + leaf.size) {
+    if (leaf.y > leavesCanvas.height + leaf.size) {
         Object.assign(leaf, createLeaf());
         leaf.y = -leaf.size;
     }
 }
 
 function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    leavesCtx.clearRect(0, 0, leavesCanvas.width, leavesCanvas.height);
     for (const leaf of leaves) {
         updateLeaf(leaf);
         drawLeaf(leaf);
@@ -115,9 +120,3 @@ for (let i = 0; i < LEAF_COUNT; i++) {
 }
 
 animate();
-
-// Optional: handle window resize
-window.addEventListener('resize', () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-});

@@ -4,17 +4,72 @@ body, html {
     padding: 0;
     box-sizing: border-box;
     width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    background: #181818;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: #181818; /* fallback dark sky */
+}
+
+.section {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    scroll-snap-align: start;
+}
+
+/* Each section gets its own sunset color or gradient */
+.section-title {
+    background: rgba(24, 24, 24, 0);
+}
+
+.section-about {
+    /* Transparent at top, opaque at bottom */
+    background: linear-gradient(
+        to bottom,
+        rgba(24, 24, 24, 0) 0%,      /* Fully transparent */
+        rgba(35, 35, 91, 0.7) 40%,   /* Semi-transparent deep blue */
+        rgba(58, 58, 124, 1) 100%    /* Fully opaque faint purple */
+    );
+}
+.section-projects {
+    background: linear-gradient(
+        to bottom,
+        #3a3a7c 0%,      /* Faint purple */
+        #355ca3 40%,     /* Blue */
+        #6a5ca3 100%     /* Blue-purple */
+    );
+}
+.section-experience {
+    background: linear-gradient(
+        to bottom,
+        #6a5ca3 0%,      /* Blue-purple */
+        #f7b733 60%,     /* Gold */
+        #ff9800 100%     /* Orange */
+    );
+}
+.section-contacts {
+    background: linear-gradient(
+        to bottom,
+        #ff9800 0%,      /* Orange */
+        #ff7c7c 60%,     /* Pink */
+        #ff3c3c 100%     /* Red */
+    );
+}
+
+body {
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;
 }
 
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     width: 100vw;
+    height: 100vh;
 }
 
 /* Add these styles for the canvas background */
@@ -25,5 +80,15 @@ body, html {
     width: 100vw;
     height: 100vh;
     pointer-events: none; /* allows clicks to pass through */
+    z-index: 1;
+}
+
+#stars-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
     z-index: 0;
 }
