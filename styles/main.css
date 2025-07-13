@@ -71,3 +71,60 @@ body {
     pointer-events: none;
     z-index: 0;
 }
+
+/* Section Headings */
+.section h2 {
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #fff;
+    margin-bottom: 1.2rem;
+    text-shadow: 0 2px 16px #000a, 0 1px 0 #fff2;
+    transition: color 0.3s;
+}
+
+/* Description Text */
+.description-text {
+    font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+    font-size: 1.3rem;
+    color: #e0e0e0;
+    background: rgba(32,32,32,0.7);
+    border-radius: 12px;
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 24px #0006;
+    max-width: 700px;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+    transition: background 0.3s;
+}
+
+/* Title Text Styling */
+.title-text {
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    color: #ffd700;
+    letter-spacing: 0.15em;
+    text-shadow: 0 2px 24px #ffd70088, 0 1px 0 #fff2;
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 0.2em;
+    justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .section h2 {
+        font-size: 2rem;
+    }
+    .title-text {
+        font-size: 2.5rem;
+    }
+    .description-text {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
