@@ -5,6 +5,8 @@
     letter-spacing: 0.1em;
     font-weight: bold;
     user-select: none;
+    position: relative;
+    z-index: 1;
 }
 
 .title-text span {
