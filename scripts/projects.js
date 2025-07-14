@@ -3,12 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(response => response.json())
         .then(projects => {
             const projectsContainer = document.querySelector('.section-projects .container');
-            const descriptionDiv = projectsContainer.querySelector('.description-text');
+            const descriptionDiv = projectsContainer.querySelector('#projects-list');
             descriptionDiv.innerHTML = ""; // Clear placeholder
 
             Object.entries(projects).forEach(([name, info]) => {
                 const projectDiv = document.createElement('div');
-                projectDiv.className = 'project-card';
+                projectDiv.className = 'card project-card';
 
                 // Only show image if path exists
                 const imageHtml = info.path

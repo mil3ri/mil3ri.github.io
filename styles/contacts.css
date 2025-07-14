@@ -1,11 +1,11 @@
-.contacts-list {
+#contacts-list {
     border-radius: 20px;
     padding: 2.5rem 2rem;
     margin: 2rem auto 0 auto;
     max-width: 420px;
 }
 
-.contacts-list ul {
+#contacts-list ul {
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -14,10 +14,9 @@
     margin: 0;
 }
 
-.contacts-list li {
+#contacts-list li {
     margin: 0;
     text-align: center;
-    background: linear-gradient(135deg, rgba(71, 74, 78, 0.85) 0%, rgba(38, 43, 49, 0.85) 40%);
     border-radius: 14px;
     box-shadow: 0 2px 12px rgba(44,62,80,0.12);
     padding: 0.6rem 0.2rem;
@@ -29,7 +28,7 @@
     transition: transform 0.18s, box-shadow 0.18s;
 }
 
-.contacts-list li:hover {
+#contacts-list li:hover {
     transform: translateY(-4px) scale(1.04);
     box-shadow: 0 6px 24px rgba(44,62,80,0.22);
 }
@@ -42,7 +41,7 @@
     filter: drop-shadow(0 2px 6px rgba(44,62,80,0.18));
 }
 
-.contacts-list a {
+#contacts-list a {
     color: #7ec7ff;
     text-decoration: none;
     font-weight: bold;
@@ -53,7 +52,7 @@
     letter-spacing: 0.02em;
 }
 
-.contacts-list a:hover {
+#contacts-list a:hover {
     color: #fff;
     text-shadow: 0 0 8px #7ec7ff88;
 }

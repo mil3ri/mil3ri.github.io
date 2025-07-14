@@ -3,28 +3,24 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             const contactsList = document.getElementById('contacts-list');
-            contactsList.innerHTML = `
-                <ul class="contacts-row">
-                    <li>
-                        <a href="${data.GitHub}" target="_blank" rel="noopener">
-                            <img src="${data.Logos.GitHub}" alt="GitHub" class="contact-logo"><br>
-                            GitHub
+            const contactKeys = ['GitHub', 'LinkedIn', 'Email'];
+            let listHTML = '<ul class="contacts-row">';
+            contactKeys.forEach(key => {
+                const url = data[key];
+                const logo = data.Logos[key];
+                const label = key;
+                const target = key === 'Email' ? '' : ' target="_blank" rel="noopener"';
+                listHTML += `
+                    <li class="contact-item card">
+                        <a href="${url}"${target}>
+                            <img src="${logo}" alt="${label}" class="contact-logo"><br>
+                            ${label}
                         </a>
                     </li>
-                    <li>
-                        <a href="${data.LinkedIn}" target="_blank" rel="noopener">
-                            <img src="${data.Logos.LinkedIn}" alt="LinkedIn" class="contact-logo"><br>
-                            LinkedIn
-                        </a>
-                    </li>
-                    <li>
-                        <a href="${data.Email}">
-                            <img src="${data.Logos.Email}" alt="Email" class="contact-logo"><br>
-                            Email
-                        </a>
-                    </li>
-                </ul>
-            `;
+                `;
+            });
+            listHTML += '</ul>';
+            contactsList.innerHTML = listHTML;
         })
         .catch(error => {
             document.getElementById('contacts-list').textContent = 'Unable to load contacts.';

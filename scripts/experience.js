@@ -2,13 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch('data/experience.json')
         .then(response => response.json())
         .then(data => {
-            const container = document.querySelector('#section-experience .container');
-            const experienceDiv = document.createElement('div');
-            experienceDiv.className = 'experience-list';
+            const experienceContainer = document.querySelector('#section-experience .container');
+            const experienceDiv = experienceContainer.querySelector('#experience-list');
+            experienceDiv.innerHTML = ""; // Clear placeholder
 
             Object.entries(data).forEach(([company, info]) => {
                 experienceDiv.innerHTML += `
-                    <div class="experience-card">
+                    <div class="card experience-card">
                         <h3>
                             <a href="${info.Website}" target="_blank" rel="noopener">${company}</a>
                         </h3>
@@ -18,10 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 `;
             });
-
-            // Replace placeholder
-            const desc = container.querySelector('.description-text');
-            if (desc) desc.replaceWith(experienceDiv);
         })
         .catch(() => {
             const container = document.querySelector('#section-experience .container');
