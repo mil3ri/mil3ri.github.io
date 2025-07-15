@@ -10,12 +10,14 @@
     <link rel="stylesheet" href="styles/projects.css">
     <link rel="stylesheet" href="styles/contacts.css">
     <link rel="stylesheet" href="styles/experience.css">
+    <link rel="stylesheet" href="styles/aboutMe.css">
 </head>
 <body>
     <!-- Hamburger Menu -->
     <nav class="hamburger-nav">
         <input type="checkbox" id="menu-toggle" />
-        <label for="menu-toggle" class="menu-icon star-icon" id="star-menu-icon">
+        <label for="menu-toggle" class="menu-icon star-icon" id="star-menu-icon" style="position: relative;">
+            <span class="menu-oval"></span>
             <!-- Symmetrical 4-sided Star SVG icon without glow -->
             <svg class="star-svg" width="40" height="40" viewBox="0 0 40 40" fill="white" xmlns="http://www.w3.org/2000/svg">
                 <polygon points="20,2 26,14 38,20 26,26 20,38 14,26 2,20 14,14" />
@@ -79,5 +81,7 @@
     <script src="scripts/projects.js"></script>
     <script src="scripts/contacts.js"></script>
     <script src="scripts/experience.js"></script>
+    <script src="scripts/aboutMe.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </body>
 </html>
