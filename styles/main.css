@@ -111,9 +111,7 @@ body {
     padding: 1.5rem;
     margin-top: 1.5rem;
     align-items: center;
-    background-color: #0006;
-    box-shadow: #181818 0 0 20px;
-    border-radius: 16px;
+    gap: 1.5rem;
 }
 
 /* Responsive adjustments */
@@ -121,8 +119,30 @@ body {
     .section h2 {
         font-size: 2rem;
     }
-    .description-text {
+    .card {
         font-size: 1rem;
-        padding: 1rem;
+        padding: 1rem 0.7rem;
+        max-width: 90vw;
+        margin: 0.5rem 0;
+    }
+    .card-list {
+        padding: 0.5rem;
+        margin-top: 0.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .section h2 {
+        font-size: 2rem;
+    }
+    .card {
+        font-size: 0.8rem;
+        padding: 1rem 0.7rem;
+        max-width: 80vw;
+        margin: 0.5rem 0;
+    }
+    .card-list {
+        padding: 0.5rem;
+        margin-top: 0.5rem;
     }
 }

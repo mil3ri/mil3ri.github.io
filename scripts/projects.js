@@ -25,13 +25,19 @@ document.addEventListener("DOMContentLoaded", () => {
                     ? `<a href="${info.repository}" target="_blank">Source Code</a>`
                     : "";
 
+                const linksHtml = `
+                    <div class="project-links">
+                        ${liveDemoHtml}
+                        ${repoHtml}
+                    </div>
+                `;
+
                 projectDiv.innerHTML = `
                     ${imageHtml}
                     <div class="project-details">
                         <h3>${name}</h3>
                         <p>${info.description || ""}</p>
-                        ${liveDemoHtml}
-                        ${repoHtml}
+                        ${linksHtml}
                     </div>
                 `;
                 descriptionDiv.appendChild(projectDiv);
