@@ -1,6 +1,6 @@
 # Purpose
 
-This is a personal portfolio website, you can find information about me and my projects on that website.
+This is a personal portfolio website, you can find information about me and my projects on this website.
 
 # Fair Use
 
