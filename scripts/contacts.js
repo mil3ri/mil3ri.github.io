@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             const contactsList = document.getElementById('contacts-list');
-            const contactKeys = ['GitHub', 'LinkedIn', 'Email'];
+            // Get all keys except 'Logos'
+            const contactKeys = Object.keys(data).filter(key => key !== 'Logos');
             let listHTML = '<ul class="contacts-row">';
             contactKeys.forEach(key => {
                 const url = data[key];

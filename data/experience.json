@@ -1,16 +1,17 @@
 {
-    "35Dijital": {
-        "Website": "https://35dijital.com",
-        "Position": "Software Engineer",
-        "StartDate": "2023-10-01",
-        "EndDate": "Present",
-        "Description": "Developing and maintaining web applications using modern technologies."
-    },
     "Genarion": {
         "Website": "https://genarion.com",
-        "Position": "Software Engineer",
-        "StartDate": "2022-01-01",
-        "EndDate": "2023-09-30",
-        "Description": "Worked on various projects involving web development and software solutions."
+        "Position": "Data Science Trainee",
+        "StartDate": "2024-10",
+        "EndDate": "Present",
+        "Description": "Writing the backend for a Football Analytics Software with PyTorch and visualizing the calculations with Matplotlib and Flask web app."
+    },
+    
+    "35Dijital": {
+        "Website": "https://35dijital.com",
+        "Position": "Software Engineer Intern",
+        "StartDate": "2024-06",
+        "EndDate": "2024-09",
+        "Description": "Maintaining social media pages and doing research for the APIs that are used in the websites."
     }
 }

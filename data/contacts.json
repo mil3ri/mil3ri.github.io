@@ -2,9 +2,11 @@
     "GitHub": "https://github.com/mil3ri",
     "LinkedIn": "https://www.linkedin.com/in/kerem-s%C3%B6nmez-37357b234/",
     "Email": "mailto:3820898@gmail.com",
+    "Resume": "https://drive.google.com/drive/folders/12ALzPkNktULpxZaJq6a_9rBcARF7qv5L",
     "Logos": {
-        "GitHub": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+        "GitHub": "/assets/github-white-icon.png",
         "LinkedIn": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg",
-        "Email": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png"
+        "Email": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png",
+        "Resume": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Deepin_Icon_Theme_%E2%80%93_x-office-document_%2831%29.svg"
     }
 }
