@@ -1,4 +1,9 @@
 {
+    "BiteWise": {
+        "path":"/assets/bitewise-pink-logo.png",
+        "url":"https://mil3ri.github.io/BiteWise",
+        "description": "The landing page for a location based healthy meal finder project."
+    },
     "Boun Course Planner": {
         "path": "/assets/boun-course-planner.png",
         "url": "https://mil3ri.github.io/boun-course-planner/",
