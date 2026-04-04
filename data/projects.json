@@ -13,5 +13,9 @@
     "Boun Course Scraper": {
         "repository": "https://github.com/mil3ri/boun_course_scraper",
         "description": "A Python script to scrape course data from Bogazici University's website"
+    },
+    "Kuran 23 Mobile Version": {
+        "repository": "https://github.com/mil3ri/kuran23-mobile",
+        "description": "Mobile Wrapper for an amazing Qur'an reader app"
     }
 }
