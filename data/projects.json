@@ -17,5 +17,10 @@
     "Kuran 23 Mobile Version": {
         "repository": "https://github.com/mil3ri/kuran23-mobile",
         "description": "Mobile Wrapper for an amazing Qur'an reader app"
+    },
+    "Ihya Okuma Uygulaması": {
+        "repository": "https://github.com/mil3ri/ihya-expo-app",
+        "description": "Reading app for Ihya Ulum ed-Din"
     }
+
 }
