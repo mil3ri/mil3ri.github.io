@@ -21,6 +21,9 @@
     "Ihya Okuma Uygulaması": {
         "repository": "https://github.com/mil3ri/ihya-expo-app",
         "description": "Reading app for Ihya Ulum ed-Din"
+    },
+    "StarUML LLM Extension": {
+        "repository": "https://github.com/mil3ri/starumltool",
+        "description": "An LLM extension for StarUML"
     }
-
 }

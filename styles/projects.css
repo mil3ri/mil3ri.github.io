@@ -1,14 +1,19 @@
 #projects-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    gap: 1.2rem;
+    width: min(1100px, 94vw);
+    align-items: stretch;
 }
 
 .project-card {
     display: flex;
     align-items: flex-start;
     padding: 1rem;
-    margin: 0rem;
+    margin: 0;
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
 }
 
 .project-image {
@@ -51,6 +56,10 @@
 }
 
 @media (max-width: 600px) {
+    #projects-list {
+        grid-template-columns: 1fr;
+    }
+
     .project-card {
         flex-direction: column;
         align-items: center;
