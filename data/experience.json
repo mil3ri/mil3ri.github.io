@@ -1,7 +1,15 @@
 {
+    "Tümosan": {
+        "Website": "https://www.tumosan.com.tr/tr",
+        "Position": "Management Information Systems Intern",
+        "StartDate": "2026-06",
+        "EndDate": "2026-9",
+        "Description": "Working within the SAP system and helping advisors."
+    },
+
     "Genarion": {
         "Website": "https://genarion.com",
-        "Position": "Data Science Trainee",
+        "Position": "Junior Full Stack Developer",
         "StartDate": "2024-10",
         "EndDate": "2025-10",
         "Description": "Writing the backend for a Football Analytics Software with PyTorch and visualizing the calculations with Matplotlib and Flask web app."
