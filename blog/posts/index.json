@@ -1,0 +1,20 @@
+{
+  "posts": [
+    {
+      "slug": "welcome-to-my-blog",
+      "title": "Welcome to My Blog",
+      "date": "2026-07-31",
+      "summary": "Why I moved from a hidden notes area to a proper blog page.",
+      "tags": ["meta", "writing"],
+      "draft": false
+    },
+    {
+      "slug": "draft-template-note",
+      "title": "Draft Template Note",
+      "date": "2026-08-01",
+      "summary": "Draft example to show how unpublished entries stay hidden.",
+      "tags": ["draft"],
+      "draft": true
+    }
+  ]
+}

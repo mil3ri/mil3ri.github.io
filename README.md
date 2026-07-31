@@ -21,3 +21,15 @@ To setup the project yourself follow these steps:
    ```
 
 3. Open the `index.html` file in your web browser to view the portfolio.
+
+# Blog Writing Workflow
+
+Blog lives at `/blog` and uses markdown files in `blog/posts`.
+
+1. Copy `blog/templates/post-template.md` into `blog/posts/<slug>.md`
+2. Add/update post metadata in `blog/posts/index.json`
+3. Keep `"draft": true` while writing
+4. Switch to `"draft": false` when ready to publish
+5. Commit and push
+
+You can use `blog/templates/publish-checklist.md` for each post before publishing.

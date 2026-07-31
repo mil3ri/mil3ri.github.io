@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="styles/contacts.css">
     <link rel="stylesheet" href="styles/experience.css">
     <link rel="stylesheet" href="styles/aboutMe.css">
-    <link rel="stylesheet" href="styles/secretUmumi.css">
 </head>
 <body>
     <!-- Hamburger Menu -->
@@ -35,6 +34,9 @@
                 <a href="#section-projects" class="menu-link glow-letter">Projects</a>
             </li>
             <li>
+                <a href="/blog/" class="menu-link glow-letter">Blog</a>
+            </li>
+            <li>
                 <a href="#section-experience" class="menu-link glow-letter">Experience</a>
             </li>
             <li>
@@ -53,7 +55,10 @@
     </div>
     <div class="section section-about" id="section-about">
         <div class="container">
-            <h2>About <span id="secret-about-trigger">Me</span></h2>
+            <h2>
+                About Me
+                <a id="secret-about-trigger" class="blog-entry-link" href="/blog/">Blog</a>
+            </h2>
             <div class="card">placeholder for about me</div>
         </div>
     </div>
@@ -76,25 +81,6 @@
         </div>
     </div>
 
-    <div id="secret-umumi-page" class="secret-page" aria-hidden="true">
-        <div class="secret-panel">
-            <div class="secret-toolbar">
-                <button id="umumi-back-button" class="secret-btn" type="button">Back to list</button>
-                <button id="umumi-close-button" class="secret-btn secret-btn-secondary" type="button">Close</button>
-            </div>
-
-            <div id="umumi-list-view" class="secret-list-view">
-                <h3>Umumi Markdown Files</h3>
-                <div id="umumi-file-list" class="secret-file-list"></div>
-            </div>
-
-            <div id="umumi-reader-view" class="secret-reader-view" hidden>
-                <h3 id="umumi-reader-title"></h3>
-                <div id="umumi-markdown-content" class="card"></div>
-            </div>
-        </div>
-    </div>
-
     <script src="scripts/stars.js"></script>
     <script src="scripts/leaves.js"></script>
     <script src="scripts/hamburgerMenu.js"></script>
@@ -103,7 +89,6 @@
     <script src="scripts/contacts.js"></script>
     <script src="scripts/experience.js"></script>
     <script src="scripts/aboutMe.js"></script>
-    <script src="scripts/secretUmumi.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </body>
 </html>
