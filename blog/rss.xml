@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>mil3ri blog</title>
+    <link>https://mil3ri.github.io/blog/</link>
+    <description>Notes and writing from mil3ri.</description>
+    <language>en-us</language>
+    <item>
+      <title>Welcome to My Blog</title>
+      <link>https://mil3ri.github.io/blog/?post=welcome-to-my-blog</link>
+      <guid>https://mil3ri.github.io/blog/?post=welcome-to-my-blog</guid>
+      <pubDate>Fri, 31 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Why I moved from a hidden notes area to a proper blog page.</description>
+    </item>
+  </channel>
+</rss>

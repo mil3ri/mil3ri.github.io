@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mil3ri blog</title>
+    <link rel="stylesheet" href="/blog/styles.css">
+</head>
+<body>
+    <main class="blog-layout">
+        <header class="blog-header">
+            <a class="home-link" href="/">← Home</a>
+            <h1>Blog</h1>
+            <nav class="blog-nav">
+                <a href="/blog/archive.html">Archive</a>
+                <a href="/blog/rss.xml">RSS</a>
+            </nav>
+        </header>
+
+        <section class="blog-content">
+            <aside class="post-list-panel">
+                <h2>Posts</h2>
+                <p class="hint">Draft posts are hidden until you set <code>"draft": false</code>.</p>
+                <div id="post-list" class="post-list"></div>
+            </aside>
+
+            <article class="post-reader">
+                <h2 id="post-title">Select a post</h2>
+                <p id="post-meta" class="post-meta">Pick a post from the list to read it.</p>
+                <div id="post-content" class="post-content"></div>
+            </article>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="/blog/blog.js"></script>
+</body>
+</html>

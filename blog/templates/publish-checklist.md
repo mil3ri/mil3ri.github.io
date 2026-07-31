@@ -1,0 +1,6 @@
+- [ ] Copy `blog/templates/post-template.md` into `blog/posts/<slug>.md`
+- [ ] Fill frontmatter (`title`, `date`, `summary`, `tags`, `draft`)
+- [ ] Add matching entry in `blog/posts/index.json`
+- [ ] Review formatting and links/images
+- [ ] Set `"draft": false` only when ready
+- [ ] Commit and push to publish on GitHub Pages
