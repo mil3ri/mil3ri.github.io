@@ -4,24 +4,49 @@
     gap: 1.2rem;
     width: min(1100px, 94vw);
     align-items: stretch;
+    max-height: calc(100vh - 10rem);
+    overflow-y: auto;
+    padding-right: 0.4rem;
+}
+
+#projects-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+#projects-list::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.05);
+    border-radius: 3px;
+}
+
+#projects-list::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.2);
+    border-radius: 3px;
 }
 
 .project-card {
     display: flex;
-    align-items: flex-start;
-    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2rem;
     margin: 0;
     width: 100%;
     max-width: none;
     box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.18s, box-shadow 0.18s;
+}
+
+.project-card:hover {
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 6px 24px rgba(44,62,80,0.22);
 }
 
 .project-image {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     border-radius: 8px;
-    margin-right: 1rem;
+    margin-bottom: 0.8rem;
 }
 
 .project-details {
@@ -34,25 +59,35 @@
 .project-details h3 {
     margin: 0 0 0.5rem 0;
     color: #fff;
+    font-size: 1.25rem;
 }
 
 .project-details p {
     margin: 0 0 0.5rem 0;
-    color: #ccc;
+    color: #eaf6ff;
 }
 
 .project-links {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .project-details a {
-    color: #4fc3f7;
+    color: #7ec7ff;
     text-decoration: none;
     font-weight: bold;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    font-size: 1.08rem;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
     white-space: nowrap;
-    margin-right: 0;
+}
+
+.project-details a:hover {
+    color: #fff;
+    text-shadow: 0 0 8px #7ec7ff88;
 }
 
 @media (max-width: 600px) {
@@ -61,22 +96,11 @@
     }
 
     .project-card {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 0.7rem;
+        padding: 0.9rem;
     }
     .project-image {
-        margin-right: 0;
-        margin-bottom: 0.8rem;
-        width: 90px;
-        height: 90px;
-    }
-    .project-details {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
+        width: 80px;
+        height: 80px;
     }
     .project-details h3 {
         font-size: 1.3rem;
