@@ -1,6 +1,6 @@
 ---
 title: Your Post Title
-date: YYYY-MM-DD
+date: 2000-01-01
 summary: One sentence summary for list and RSS.
 tags:
   - tag-one
